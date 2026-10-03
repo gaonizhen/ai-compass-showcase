@@ -102,7 +102,7 @@
 
 <nav>
   <div class="nav-inner">
-    <span class="brand">🧭 AI Office Compass<small>正式版 v1.2</small></span>
+    <span class="brand">🧭 AI Office Compass<small>正式版 v1.3</small></span>
     <a href="#tldr" class="active">TL;DR</a>
     <a href="#overview">赛道总览</a>
     <a href="#position">战略定位</a>
@@ -120,7 +120,7 @@
   <div class="kicker">AI OFFICE COMPASS · 竞品深度分析 · 2026 H2</div>
   <h1>如果我是豆包工作的 PM：C 端 Agent 办公赛道竞品分析与策略建议</h1>
   <div class="meta-row">
-    <span class="badge">正式版 v1.2（一手走查 20/20 + 10-04 复走）</span>
+    <span class="badge">正式版 v1.3（20/20 + 复走 + 赛道边界补记）</span>
     <span class="badge gray">数据截至 2026-10-04（走查 10-01 + 复走 10-04）</span>
     <span class="badge gray">参赛产品：4 个 · 走查任务 5 类 × 4 家（含 S7 补测）</span>
     <span class="badge gray">作品集 · 第一期</span>
@@ -184,6 +184,19 @@
     </tbody>
   </table>
   <div class="caption">数据截至 2026-10-01 · 豆包工作统合时间线经走查期多源交叉修正（原 M1 档案误记 2025-08，由 Manus 报告声明"飞书 Aily 更名豆包工作伙伴"触发外部核验，QQ 新闻 2026-08-21 证实 8-13 更名、7-30 飞书组织调整）<sup><a href="#ref">[1]</a></sup>。豆包 MAU 3.82 亿为 QuestMobile 2026-08 口径 <span class="lvl C">C</span>。</div>
+  <div class="card">
+    <div class="chart-title">赛道边界与落选说明（2026-10-04 补记）</div>
+    <p style="font-size:13px;color:var(--ink-2);margin-bottom:10px"><b>口径声明</b>：本报告的"办公赛道"指 <b>C 端 Agent 产品的办公任务实测</b>，不是"纯办公品类产品清单"——四家按格局代表性入选（领跑者 / 智能上限口碑 / 平台型 / 兴衰样本，判据见 PRD §6.1），S1-S7 任务全部为办公任务。纯办公位选手与本报告的关系如下：</p>
+    <table>
+      <thead><tr><th style="width:16%">产品</th><th>定位与规模（多源）</th><th style="width:30%">未入第一期实测的原因</th><th style="width:18%">去向</th></tr></thead>
+      <tbody>
+        <tr><td class="strong">WorkBuddy<br>（腾讯）</td><td>纯办公位 · 2026-03 上线 · 办公智能体细分 <b>MAU 现任</b>第一（QuestMobile 7 月 PC 端 658 万 → Xsignal 8 月破 1000 万 → 9 月约 2000 万 / DAU 1300 万，DAU/MAU 65-75%）<span class="lvl C">C</span></td><td><b>名单评审盲区，如实交代</b>：9-13 定名单时未捕获其规模数据线；10-04 复盘捕获后列为批次二首位补测对象</td><td>批次二实测（首位）</td></tr>
+        <tr><td class="strong">千问办公<br>（阿里）</td><td>纯办公位 · QoderWork/悟空/MuleRun 三合一 · 8-3 公测 · 9-4 用户破 3000 万（企业用户过半）· 78 元/月起 · 独立客户端 8 月 MAU 158 万（AI 办公智能体增速榜第二）<span class="lvl C">C</span></td><td>企业用户占比过半、C 端纯度弱于第一期四家；名单评审时客户端规模数据未进入视野</td><td>批次二实测</td></tr>
+        <tr><td class="strong">ChatGPT Work<br>（OpenAI）</td><td>国际对照组 · GPT-5.6 职场智能体 + Workspace Agents（4-22 起面向 Business/Enterprise）<span class="lvl C">C</span></td><td>任务层可比，但<b>竞争集合不同</b>（对手是 Copilot / Gemini in Workspace，不与国内四家出现在同一张采购对比表）；生态策略为"连接器型"（不自建云盘，产物不自动落位）</td><td>批次二以"国际对照组"进入，判据先做生态中立化改造</td></tr>
+      </tbody>
+    </table>
+    <div class="caption"><b>批次二方案（P2，2026-10-04 定稿并启动）</b>：千问办公 + WorkBuddy + 豆包工作（锚点：跨期可比 + 时间漂移检验）+ ChatGPT Work（国际对照组）× 同一套 S 题（S1/S3/S4/S5/S7）；判据拆"中性层（全体可比）/ 生态层（单列标注）"两层口径。命名注：本项目"第二期"保留给大模型横评，本批次记作 <b>P2</b>。</div>
+  </div>
 </section>
 
 <!-- ============ 3. 战略定位图 ============ -->
@@ -405,8 +418,8 @@
 </section>
 
 <footer>
-  <p>AI Office Compass · 正式版 v1.2 · 生成日期 2026-10-04 · 数据截至 2026-10-04 ·
-  一手走查：4 产品 × 5 任务（含 S7 补测批次）+ 10-04 用户复走（豆包 S1 / 扣子 S5）· 证据库 data/evidence/ · 方法论与需求详见 PRD v2.0 ·
+  <p>AI Office Compass · 正式版 v1.3 · 生成日期 2026-10-04 · 数据截至 2026-10-04 ·
+  一手走查：4 产品 × 5 任务（含 S7 补测批次）+ 10-04 用户复走（豆包 S1 / 扣子 S5）· 批次二（P2）已启动 · 证据库 data/evidence/ · 方法论与需求详见 PRD v2.1 ·
   数据与模板分离（data as code），重跑任务后更新数据即可重渲染。</p>
 </footer>
 

@@ -17,8 +17,8 @@
 
 | 文件 | 说明 |
 |---|---|
-| [2026-H2-agent-office-report.html](./2026-H2-agent-office-report.html) | 正式报告 v1.1（46KB 单文件、零依赖、双击可开） |
-| [2026-H2-agent-office-report.pdf](./2026-H2-agent-office-report.pdf) | 同内容 PDF（8 页） |
+| [2026-H2-agent-office-report.html](./2026-H2-agent-office-report.html) | 正式报告 v1.3（单文件、零依赖、双击可开） |
+| [2026-H2-agent-office-report.pdf](./2026-H2-agent-office-report.pdf) | 同内容 PDF |
 | [2026-H2-agent-office-onepager.pdf](./2026-H2-agent-office-onepager.pdf) | 一页纸摘要（30 秒版） |
 
 ## 三个核心判断
@@ -41,4 +41,4 @@
 > 走查证据库（截图/产出物/走查记录）存于私有仓库，如需查验可联系作者开放。
 
 ---
-*数据截至 2026-10-01 · 方法论与决策痕迹：PRD v2.0 · 走查判据：data/journey/tasks.md*
+*数据截至 2026-10-01 · 完整方法论、判据与决策痕迹存于私有主仓库（报告 §10 内含方法论与局限声明）*

@@ -17,7 +17,7 @@
 
 | 文件 | 说明 |
 |---|---|
-| [2026-H2-agent-office-report.html](./2026-H2-agent-office-report.html) | 正式报告 v1.3（单文件、零依赖、双击可开） |
+| [2026-H2-agent-office-report.html](./2026-H2-agent-office-report.html) | 正式报告 v1.4（单文件、零依赖、双击可开） |
 | [2026-H2-agent-office-report.pdf](./2026-H2-agent-office-report.pdf) | 同内容 PDF |
 | [2026-H2-agent-office-onepager.pdf](./2026-H2-agent-office-onepager.pdf) | 一页纸摘要（30 秒版） |
 

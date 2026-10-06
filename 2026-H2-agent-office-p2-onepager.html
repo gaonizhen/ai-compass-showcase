@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>AI Office Compass · 批次二（P2）一页纸摘要</title>
+<style>
+  @page{size:A4;margin:8mm}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#fff;color:#0f172a;font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+    line-height:1.45;font-size:10.2px}
+  .sheet{max-width:1000px;margin:0 auto;padding:4px}
+  .top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;
+    border-bottom:2px solid #0d9488;padding-bottom:7px;margin-bottom:8px}
+  .kicker{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#0d9488;font-weight:700}
+  h1{font-size:16px;font-weight:800;line-height:1.25;margin-top:3px}
+  .sub{font-size:9.6px;color:#64748b;margin-top:3px}
+  .meta{text-align:right;font-size:9.4px;color:#64748b;white-space:nowrap;line-height:1.75}
+  h2{font-size:11px;font-weight:750;margin:9px 0 4px;padding-left:7px;border-left:3px solid #0d9488}
+  .method{background:#f0fdfa;border:1px solid #99f6e4;border-radius:6px;padding:6px 8px;
+    font-size:10px;color:#115e59;line-height:1.5}
+  .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+  .card{border:1px solid #e2e8f0;border-radius:7px;padding:7px 8px}
+  .card b{font-size:10.2px;display:block;margin-bottom:2px}
+  .card p{font-size:9.6px;color:#334155}
+  table{width:100%;border-collapse:collapse;font-size:9.6px}
+  th,td{border-bottom:1px solid #e2e8f0;padding:3px 5px;text-align:left;vertical-align:top}
+  th{background:#f1f5f9;font-weight:700;font-size:9.4px;white-space:nowrap}
+  .num{font-variant-numeric:tabular-nums;white-space:nowrap;text-align:center}
+  .stars{color:#f59e0b;font-weight:700}
+  .num-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}
+  .kpi{text-align:center;border:1px solid #e2e8f0;border-radius:7px;padding:5px 4px}
+  .kpi b{display:block;font-size:15px;color:#0f766e;font-variant-numeric:tabular-nums;line-height:1.2}
+  .kpi span{font-size:9.2px;color:#64748b}
+  .warn{background:#fff7ed;border:1px solid #fed7aa;border-radius:6px;padding:5px 8px;
+    font-size:9.6px;color:#9a3412;margin-top:5px}
+  .foot{margin-top:8px;border-top:1px solid #e2e8f0;padding-top:6px;font-size:8.9px;color:#64748b;line-height:1.6}
+  .lg{font-size:9px;color:#64748b;margin-top:3px}
+  code{background:#f1f5f9;border-radius:2px;padding:0 3px;font-size:9px}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="top">
+    <div>
+      <div class="kicker">AI Office Compass · 批次二（P2）· 一页纸摘要</div>
+      <h1>补上盲区之后：三家同题复测 + "单文件"声明的机器复算</h1>
+      <div class="sub">千问办公 / WorkBuddy / ChatGPT Work（国际对照组）· 豆包工作锚点跨期复测</div>
+    </div>
+    <div class="meta">批次二 · 独立增量<br>数据截至 <b>2026-10-06</b><br>4 产品 × 5 任务</div>
+  </div>
+
+  <div class="method"><b>方法一句话：</b>沿用批次一同一套考题（写周报/数据分析/网页生成/信息调研/修 bug）与预埋事实；
+  本批次额外把交付物<b>拿回来真跑一遍</b>——修复代码喂真实浏览器 harness 跑四项断言，
+  网页交付物在<b>阻断全部外部请求</b>的条件下复算"单文件零依赖"是否成立。<b>不采信自述，只认复算。</b></div>
+
+  <h2>三个核心判断（批次二新增）</h2>
+  <div class="cards">
+    <div class="card"><b>1 · "零依赖"四家里只有两家是真的</b>
+      <p>机器实测：<b>WorkBuddy ✅</b>（内联 ECharts，1MB 单文件离线可用）· <b>ChatGPT ✅</b>（0 外部请求）·
+      <b>豆包 ❌</b>（Chart.js CDN，离线图表崩）· <b>千问 ❌</b>（Google Fonts；同一段自述既称"零依赖"又称"字体加载生效"）。</p></div>
+    <div class="card"><b>2 · "我自己实测过" ≠ "实测可信"</b>
+      <p>WorkBuddy 主动做<b>无头浏览器自证</b>，方法与走查员一致、结论可复现（★★★）；千问用<b>模拟 DOM</b>
+      跑出"监听器累积"并断言真实 DOM 行为——真实浏览器实验证明<b>同引用监听器被去重</b>，该结论不成立（★）。</p></div>
+    <div class="card"><b>3 · 对话不是产物的全部边界</b>
+      <p>ChatGPT Work 写<b>本机文件系统</b>（<code>~/Documents/Codex/…</code>），WorkBuddy/千问在<b>云端产物</b>，
+      对话只给摘要。<b>只看对话截图判卷会系统性低估这类产品</b>——我因此误判过两次，已固化为判卷规则。</p></div>
+  </div>
+
+  <h2>场景矩阵（真实走查得分）</h2>
+  <table>
+    <tr><th>任务</th><th class="num">千问办公</th><th class="num">WorkBuddy</th>
+        <th class="num">ChatGPT Work<br><span style="font-weight:400;color:#64748b">国际对照组</span></th>
+        <th class="num">豆包工作<br><span style="font-weight:400;color:#64748b">锚点</span></th><th>一句话</th></tr>
+    <tr><td>S1 写周报</td><td class="num">9.5</td><td class="num">10</td><td class="num">10</td><td class="num">10</td>
+        <td>三种反编造范式：千问"先问再写"· WorkBuddy 主动声明"未虚构"· ChatGPT 零编造</td></tr>
+    <tr><td>S3 数据分析</td><td class="num">10</td><td class="num">9.5</td><td class="num">10</td><td class="num">10</td>
+        <td>四家预埋全中、衍生计算全部验算正确（零幻觉）；千问洞察密度最高</td></tr>
+    <tr><td>S4 网页生成</td><td class="num">9.5</td><td class="num">10</td><td class="num">10</td><td class="num">9</td>
+        <td>最硬的一格：机器实测"单文件"两家真两家假；算术陷阱 ¥113.50 四家全对</td></tr>
+    <tr><td>S5 信息调研</td><td class="num">9.5</td><td class="num">9.5</td><td class="num">9</td><td class="num">8</td>
+        <td>引用质量成分水岭：千问 18 条零死链 + 主动并列四口径；ChatGPT 把门户首页当报道引用</td></tr>
+    <tr><td>S7 修 bug</td><td class="num">10 <span class="stars">★</span></td><td class="num">10 <span class="stars">★</span></td>
+        <td class="num">10 <span class="stars">★</span></td><td class="num">10 <span class="stars">★</span></td>
+        <td>四家再次全收敛（均 10/10）；差异只在解释精度（单列不计分）</td></tr>
+    <tr><td><b>均分</b></td><td class="num"><b>9.7</b></td><td class="num"><b>9.8</b></td>
+        <td class="num"><b>9.8</b></td><td class="num"><b>9.4</b></td>
+        <td><b>补上的三家与批次一第一梯队同档，没有降维打击</b></td></tr>
+  </table>
+  <div class="lg">★ = 解释精度标注（<b>不计分、不进排名</b>）：★★★ Manus · ★★ 扣子空间 · ★ 其余（均批次一对照）</div>
+
+  <h2>关键数字</h2>
+  <div class="num-row">
+    <div class="kpi"><b>4×5=20</b><span>批次二走查完成</span></div>
+    <div class="kpi"><b>2 / 4</b><span>"零依赖"复算为真</span></div>
+    <div class="kpi"><b>+113.50</b><span>算术陷阱四家全对</span></div>
+    <div class="kpi"><b>4 家全 10</b><span>S7 修 bug 再次收敛</span></div>
+  </div>
+
+  <h2>时间漂移（仅豆包具备跨期对照）</h2>
+  <table>
+    <tr><th>任务</th><th class="num">10-01</th><th class="num">10-05</th><th class="num">漂移</th><th>说明</th></tr>
+    <tr><td>S1 / S3 / S7</td><td class="num">10 / 10 / 10</td><td class="num">10 / 10 / 10</td><td class="num">无</td>
+        <td>行为特征稳定复现（画布+云盘、零幻觉、克制观察）</td></tr>
+    <tr><td>S4 网页生成</td><td class="num">9</td><td class="num">9</td><td class="num">无</td>
+        <td><b>CDN 依赖同款复现</b>——稳定行为特征而非偶发</td></tr>
+    <tr><td>S5 信息调研</td><td class="num">7</td><td class="num">8</td><td class="num">+1</td>
+        <td><b>结构性双向漂移</b>：内容质量↑、引用工程↓（2/6 存活）</td></tr>
+  </table>
+  <div class="warn"><b>覆盖范围声明</b>：<b>只有豆包具备两次测量</b>；千问办公、WorkBuddy、ChatGPT Work 均为<b>单次快照</b>，
+    本报告<b>不对其做稳定性或漂移的外推</b>。</div>
+
+  <h2>成本维度：本批次不做定量对比（如实声明）</h2>
+  <p style="font-size:9.8px;color:#334155">四家<b>不具备可比的任务级消耗数据</b>：千问积分读数为延迟刷新（2100→2099→2098，不可当消耗量）·
+  WorkBuddy 未做单题前后采集且账号总消耗混入走查测试与中断任务、无法拆分 · ChatGPT Work 与豆包工作无额度 UI。
+  <b>只保留三条可证结论</b>：① 额度透明度仍稀缺（四家仅两家显示积分）· ② 付费墙位置分化（ChatGPT 拦在入口、
+  Manus 拦在注册流程、其余后置）· ③ 免费额度足以完成全部 20 项任务。</p>
+
+  <div class="foot"><b>局限（如实）</b>：仅豆包具备跨期对照 · 成本不可比 · 交付物取证方式存在差异（三家共 4 个产物需人工下载）·
+  引用核验为抽样（30–50%）· 样本 1 人 1 次 · S2/S6/S8 未走查、矩阵不完整处不外推 · 一次工具缺陷已闭环留档
+  （WorkBuddy S3 曾因错误判据被误判完成，修正后重跑通过）。<br>
+  本报告为<b>独立增量</b>，不修改批次一《如果我是豆包工作的 PM》（数据截至 2026-10-04）的任何结论。
+  完整方法论与证据库见 <code>data/journey/tasks.md</code> 与 <code>data/evidence/</code>。</div>
+
+</div>
+</body>
+</html>

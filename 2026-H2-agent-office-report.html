@@ -125,7 +125,8 @@
     <span class="badge gray">参赛产品：4 个 · 走查任务 5 类 × 4 家（含 S7 补测）</span>
     <span class="badge gray">作品集 · 第一期</span>
   </div>
-  <div class="banner">✅ <b>本报告基于真实一手走查</b>：四家产品各完成 S1 写周报 / S3 数据分析 / S4 网页生成 / S5 信息调研，并于 10-01 晚补测 S7 修 bug（统一 prompt、预埋事实抓幻觉、逐项验算，修复代码均经走查员本地 harness 实测），全程截图与产出物存档于项目仓库 <b>data/evidence/</b>（77 张截图、19 份产出转录）。走查条件与局限见 §10。S2/S6/S8 三类任务未走查（范围决策见方法论）。</div>
+  <div class="banner">✅ <b>本报告基于真实一手走查</b>：四家产品各完成 S1 写周报 / S3 数据分析 / S4 网页生成 / S5 信息调研，并于 10-01 晚补测 S7 修 bug（统一 prompt、预埋事实抓幻觉、逐项验算，修复代码均经走查员本地 harness 实测），全程截图与产出物存档于项目仓库 <b>data/evidence/</b>（81 张截图、19 份产出转录）。走查条件与局限见 §10。S2/S6/S8 三类任务未走查（范围决策见方法论）。</div>
+  <div class="legend" style="margin-top:10px"><span>📎 <b>批次二（P2）补测已发布</b>：千问办公 / WorkBuddy / ChatGPT Work（国际对照组）同题复测 + 豆包工作锚点跨期复测，含"单文件零依赖"的机器复算结果 —— 见 <b>reports/2026-H2-agent-office-p2-report.html</b>（<b>独立增量，不修改本报告任何结论</b>，数据截至 2026-10-06）。</span></div>
 </header>
 
 <div class="wrap">
@@ -249,14 +250,14 @@
       <tr><td class="strong">S3 数据分析</td><td style="text-align:center"><span class="strong" style="color:#059669">10 ●</span></td><td style="text-align:center"><span class="strong" style="color:#059669">9.5 ●</span></td><td style="text-align:center"><span class="strong" style="color:#059669">9.5 ●</span></td><td style="text-align:center"><span class="strong" style="color:#059669">9.5 ●</span></td><td>预埋事实全部命中、零幻觉（四家收敛）；衍生指标逐项验算正确；Kimi/扣子均自修复脚本报错</td></tr>
       <tr><td class="strong">S4 网页生成</td><td style="text-align:center"><span class="strong" style="color:#059669">9 ●</span></td><td style="text-align:center"><span class="strong" style="color:#059669">10 ●</span></td><td style="text-align:center"><span class="strong" style="color:#059669">9.5 ●</span></td><td style="text-align:center"><span class="strong" style="color:#059669">9.5 ●</span></td><td>功能全对；差异在工程严谨性：Kimi 零 CDN 真·单文件（源码核验）＞ 扣子 SVG ＞ 豆包 CDN 依赖；Manus 由用户人工补测通过（两笔合计 ¥113.50 正确）</td></tr>
       <tr><td class="strong">S5 信息调研</td><td style="text-align:center"><span class="strong" style="color:#d97706">7 ◐</span></td><td style="text-align:center"><span class="strong" style="color:#d97706">7 ◐</span></td><td style="text-align:center"><span class="strong" style="color:#059669">9 ●</span></td><td style="text-align:center"><span class="strong" style="color:#059669">9 ●</span></td><td>四家均真搜索；引用质量分化：扣子 6/6 全绿、Manus 拒绝编排名、豆包 1 死链、Kimi 锚点错位；10-04 复走另见扣子 1 处主体归属错位（"2000 万企业"张冠李戴）——"链接能打开"仍需抽查内容归属</td></tr>
-      <tr><td class="strong">S7 修 bug（10-01 补测）</td><td style="text-align:center"><span class="strong" style="color:#059669">10 ●</span></td><td style="text-align:center"><span class="strong" style="color:#059669">10 ●</span></td><td style="text-align:center"><span class="strong" style="color:#059669">10 ●</span></td><td style="text-align:center"><span class="strong" style="color:#059669">10 ●</span></td><td>预埋 2 bug（越界+重复绑定）四家全中，修复经本地 harness 实测全部通过；差异在解释精度：Manus 唯一识破"同引用监听器被浏览器去重、bug 未必复现"，扣子唯一正确描述幽灵项为空白 li，豆包主动指出计数语义歧义且克制不越界</td></tr>
+      <tr><td class="strong">S7 修 bug（10-01 补测）</td><td style="text-align:center"><span class="strong" style="color:#059669">10 ●</span><br><span style="font-size:11px;color:#94a3b8">★</span></td><td style="text-align:center"><span class="strong" style="color:#059669">10 ●</span><br><span style="font-size:11px;color:#94a3b8">★</span></td><td style="text-align:center"><span class="strong" style="color:#059669">10 ●</span><br><span style="font-size:11px;color:#94a3b8">★★</span></td><td style="text-align:center"><span class="strong" style="color:#059669">10 ●</span><br><span style="font-size:11px;color:#94a3b8">★★★</span></td><td>预埋 2 bug（越界+重复绑定）四家全中，修复经本地 harness 实测全部通过；差异在解释精度：Manus 唯一识破"同引用监听器被浏览器去重、bug 未必复现"，扣子唯一正确描述幽灵项为空白 li，豆包主动指出计数语义歧义且克制不越界</td></tr>
       <tr><td>S2 做 PPT</td><td style="text-align:center;color:#94a3b8">未走查</td><td style="text-align:center;color:#94a3b8">未走查</td><td style="text-align:center;color:#94a3b8">未走查</td><td style="text-align:center;color:#94a3b8">未走查</td><td rowspan="3" style="color:var(--ink-2);font-size:12.5px">范围决策：第一期聚焦高频核心任务，S7 已于 2026-10-01 补测批次完成（四家全收敛）；S2/S6/S8 留待后续补齐——已覆盖任务足以支撑核心判断，矩阵不完整处如实标注，不做外推。</td></tr>
       <tr><td>S6 生活规划</td><td style="text-align:center;color:#94a3b8">未走查</td><td style="text-align:center;color:#94a3b8">未走查</td><td style="text-align:center;color:#94a3b8">未走查</td><td style="text-align:center;color:#94a3b8">未走查</td></tr>
       <tr><td>S8 长文档对比</td><td style="text-align:center;color:#94a3b8">未走查</td><td style="text-align:center;color:#94a3b8">未走查</td><td style="text-align:center;color:#94a3b8">未走查</td><td style="text-align:center;color:#94a3b8">未走查</td></tr>
     </tbody>
   </table>
   <div class="legend" style="margin-top:10px">
-    <span>每格得分可回溯至 evidence/{产品}/{任务}/ 的截图与产出文件（77 张截图、19 份产出转录）。</span>
+    <span>每格得分可回溯至 evidence/{产品}/{任务}/ 的截图与产出文件（81 张截图、19 份产出转录）。</span><br><span style="font-size:12px;color:#94a3b8">★ = 解释精度标注（<b>不计分、不进排名</b>）：★★★ Manus 唯一指出"同引用监听器被浏览器去重、bug 未必复现"；★★ 扣子空间唯一把幽灵项描述为"空白 <code>&lt;li&gt;</code>"（与实测一致）；★ 教科书式"一次点击加多条"（真实浏览器下不成立）。口径见 data/journey/tasks.md。</span>
   </div>
 </section>
 
@@ -388,7 +389,7 @@
     <div class="chart-title">证据分级五规范</div>
     <div class="rules">
       <div class="rule"><b>① 证据分级</b>A=一手走查截图/产出物 · B=官方页面/文档 · C=权威媒体 · D=第三方估计；关键论断标等级</div>
-      <div class="rule"><b>② 全程溯源</b>每条数据带来源 + 日期；体验结论可回溯到 evidence/ 截图库（40+ 张）</div>
+      <div class="rule"><b>② 全程溯源</b>每条数据带来源 + 日期；体验结论可回溯到 evidence/ 截图库（第一期 80 张，含批次二共 104 张）</div>
       <div class="rule"><b>③ 口径统一</b>价格统一 RMB/月并注明汇率；用户数据标注口径与来源性质</div>
       <div class="rule"><b>④ 走查统一</b>同设备、新账号、同任务措辞（含预埋事实）；偏差与局限如实披露</div>
       <div class="rule"><b>⑤ 标注时效</b>所有数据区块标"数据截至"；过期即触发重跑</div>
@@ -397,11 +398,11 @@
   <div class="two-col">
     <div class="card">
       <div class="chart-title">走查执行摘要</div>
-      <p style="font-size:13.5px;color:var(--ink-2)">2026-09-30 至 10-01 两批 · 四家产品 × 五类任务（S1 写周报 / S3 数据分析 / S4 网页生成 / S5 信息调研 + 10-01 晚 S7 修 bug 补测批次），统一 prompt + 预埋事实（销售数据 3 处、bug 代码 2 处、评审文档 5 个分歧点）抓幻觉；**20 项任务全部完成**——其中 Manus S4 的交互实测受自动化环境限制，由用户人工补测闭环（两笔合计 ¥113.50 正确）；S7 批次的修复代码全部经走查员本地 harness 实测（含 buggy 原版基线对照）。每任务记录步数/耗时/断点/付费墙/aha/得分，77 张截图与 19 份产出转录归档于 data/evidence/。</p>
+      <p style="font-size:13.5px;color:var(--ink-2)">2026-09-30 至 10-01 两批 · 四家产品 × 五类任务（S1 写周报 / S3 数据分析 / S4 网页生成 / S5 信息调研 + 10-01 晚 S7 修 bug 补测批次），统一 prompt + 预埋事实（销售数据 3 处、bug 代码 2 处、评审文档 5 个分歧点）抓幻觉；**20 项任务全部完成**——其中 Manus S4 的交互实测受自动化环境限制，由用户人工补测闭环（两笔合计 ¥113.50 正确）；S7 批次的修复代码全部经走查员本地 harness 实测（含 buggy 原版基线对照）。每任务记录步数/耗时/断点/付费墙/aha/得分，81 张截图与 19 份产出转录归档于 data/evidence/。</p>
     </div>
     <div class="card">
       <div class="chart-title">局限声明（如实）</div>
-      <p style="font-size:13.5px;color:var(--ink-2)">① 样本 1 人 1 次，非可用性测试；② S2/S6/S8 未走查，矩阵不完整处不外推；③ Manus S4 由用户人工补测闭环（自动化实测未覆盖，结果一致）；④ 豆包/Kimi 免费档走查，付费档体验未覆盖；⑤ 用户数据多为第三方估计（D 级）；⑥ AI 报告的引用核验抽样比例约 30-50%，非全量。</p>
+      <p style="font-size:13.5px;color:var(--ink-2)">① 样本 1 人 1 次，非可用性测试；② S2/S6/S8 未走查，矩阵不完整处不外推；③ Manus S4 由用户人工补测闭环（自动化实测未覆盖，结果一致）；④ 豆包/Kimi 免费档走查，付费档体验未覆盖；⑤ 用户数据多为第三方估计（D 级）；⑥ AI 报告的引用核验抽样比例约 30-50%，非全量；⑦ 部分交互类交付物未落盘归档（Kimi/扣子/Manus 三家 S4 的 HTML、第一批次 S7 修复代码；其中 Manus S4 曾以误名的 data URL 文件入库，2026-10-06 审计后更正），以产出转录与截图为准——四家 S7 由同一本地 harness 统一验证，故 04-fix-verified.png 为同一张验证图。</p>
     </div>
   </div>
   <div class="card" id="ref">
@@ -412,14 +413,14 @@
       <li>[3] 扣子积分制与套餐：扣子官方文档（2026-01-19 套餐升级公告）· 火山引擎计费 FAQ <span class="lvl B">B</span></li>
       <li>[4] Manus 定价与现状：manus.im/pricing（2026-09 查证）· 知乎专栏分析 <span class="lvl B">B</span></li>
       <li>[5] 腾讯 QClaw 停运、云栖大会千问办公：财新（2026-09-23/24）<span class="lvl C">C</span> — 由 Kimi/扣子调研报告发现，走查期外部复核</li>
-      <li>[6] <span class="strong">一手走查证据库</span>：豆包工作 / Kimi / 扣子空间 / Manus 各任务截图与产出物（data/evidence/ · 77 张截图 + 19 份产出转录，证据等级 <span class="lvl A">A</span>）</li>
+      <li>[6] <span class="strong">一手走查证据库</span>：豆包工作 / Kimi / 扣子空间 / Manus 各任务截图与产出物（data/evidence/ · 81 张截图 + 19 份产出转录，证据等级 <span class="lvl A">A</span>）</li>
       <li>[7] 走查判据与预埋事实设计：data/journey/tasks.md（S1-S8 统一 prompt + 判据权重）<span class="lvl A">A</span></li>
     </ul>
   </div>
 </section>
 
 <footer>
-  <p>AI Office Compass · 正式版 v1.4 · 生成日期 2026-10-05 · 数据截至 2026-10-04 ·
+  <p>AI Office Compass · 正式版 v1.4 · 生成日期 2026-10-05 · 数据截至 2026-10-04（2026-10-06 口径勘误：证据计数 77→81 张、§10 规范② 计数对齐、局限⑦补记归档缺口与 Manus S4 误存文件更正）·
   一手走查：4 产品 × 5 任务（含 S7 补测批次）+ 10-04 用户复走（豆包 S1 / 扣子 S5）· 批次二（P2）已启动 · 证据库 data/evidence/ · 方法论与需求详见 PRD v2.2 ·
   数据与模板分离（data as code），重跑任务后更新数据即可重渲染。</p>
 </footer>
